@@ -52,7 +52,7 @@ const useChat = () => {
 					text: stock.name,
 					isUser: false,
 					isData: true,
-					value: `${stock.code}@${exchangeCode}`,
+					value: `${stock.code}@${exchangeCode}`
 				}))
 			);
 			setMessages(messagesCopy);
@@ -70,7 +70,6 @@ const useChat = () => {
 			messagesCopy.push({ text: stockName, isUser: true, isData: false });
 			const response = await fetch(`${apiRoutes.fetchExchanges}/${exchangeCode}/stocks/${stockCode}`);
 			const data = await response.json();
-			console.log(data)
 			messagesCopy.push(
 				{ text: `Here are the details of ${stockName}: ${data.price} $`, isUser: false, isData: false },
 				{ text: 'Go Back', isUser: false, isData: true, value: exchangeCode }
