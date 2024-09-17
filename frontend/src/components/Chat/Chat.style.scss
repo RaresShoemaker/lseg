@@ -1,0 +1,22 @@
+.chat-container {
+  padding: 20px;
+	display: flex;
+	flex-direction: column;
+	min-height: 80vh;
+	height: auto;
+	width: 70vw;
+	background-color: grey;
+	border-radius: 20px;
+
+	.chat-messages {
+		width: fit-content;
+		color: black;
+	}
+
+	.buttons-container {
+		display: flex;
+		flex-direction: column;
+		max-width: fit-content;
+		column-gap: 2px;
+	}
+}
