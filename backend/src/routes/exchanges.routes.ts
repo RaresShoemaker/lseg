@@ -9,4 +9,13 @@ router
     exchangesController.fetchStockExhanges
   )
 
+
+  router
+  .route("/:exchangeCode/stocks")
+  .get(exchangesController.fetchStocks);
+
+  router
+  .route("/:exchangeCode/stocks/:stockCode")
+  .get(exchangesController.fetchStockDetails);
+
   export default router;
